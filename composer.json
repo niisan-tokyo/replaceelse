@@ -1,0 +1,11 @@
+{
+    "name": "niisan/replace_else",
+    "description": "replace else description",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Niisan\\ReplaceElse\\":"src"
+        }
+    }
+}
