@@ -74,6 +74,19 @@ class AltElseTest extends TestCase
         $this->assertEquals('OTHER', $obj->ifElseIf3(6));
     }
 
+    /**
+     * 
+     * @dataProvider getObjects
+     */
+    public function testIfElseIf4($obj)
+    {
+        $this->assertEquals('ZERO', $obj->ifElseIf4(0));
+        $this->assertEquals('ONE', $obj->ifElseIf4(1));
+        $this->assertEquals('TWO', $obj->ifElseIf4(2));
+        $this->assertEquals('OTHER', $obj->ifElseIf4(3));
+        $this->assertEquals('OTHER', $obj->ifElseIf4(6));
+    }
+
     public function getObjects()
     {
         return [

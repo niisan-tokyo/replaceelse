@@ -38,7 +38,7 @@ class ReplaceElse
     }
 
     /**
-     * 三項演算子 (この場合は等価)
+     * switch文 (この場合は等価)
      */
     public function ifElseIf(int $num)
     {
@@ -92,4 +92,23 @@ class ReplaceElse
 
         return $arr[$num] ?? 'OTHER';
     }
+
+    /**
+     * 配列 + null合体演算子 + メソッドコール
+     */
+    public function ifElseIf4(int $num)
+    {
+        $arr = [
+            0 => 'getZero',
+            1 => 'getOne',
+            2 => 'getTwo'
+        ];
+        $method = $arr[$num] ?? 'getOther';
+        return $this->{$method}();
+    }
+
+    private function getZero() { return 'ZERO'; }
+    private function getOne() { return 'ONE'; }
+    private function getTwo() { return 'TWO'; }
+    private function getOther() { return 'OTHER'; }
 }

@@ -32,4 +32,5 @@ class OriginalElse
 
     public function ifElseIf2(int $num){return $this->ifElseIf($num);}
     public function ifElseIf3(int $num){return $this->ifElseIf($num);}
+    public function ifElseIf4(int $num){return $this->ifElseIf($num);}
 }
